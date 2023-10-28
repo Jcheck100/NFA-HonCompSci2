@@ -3,6 +3,7 @@ import java.util.*;
 
 
 /* TO DO LIST:
+ * Make the enemy stats method work when called
  * Add more battles
  * introduce EXP system and Levels (allows the player to improve stats)
  * introduce types of enemies that makes the move you use actually matter instead of just picking the highest damage
