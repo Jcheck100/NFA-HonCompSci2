@@ -1,7 +1,16 @@
 import java.lang.*;
 import java.util.*;
 
-public class UnknownGame {
+
+/* TO DO LIST:
+ * Add more battles
+ * introduce EXP system and Levels (allows the player to improve stats)
+ * introduce types of enemies that makes the move you use actually matter instead of just picking the highest damage
+ * introduce a crit system based off a luck stat
+ * make more moves that you can unlock and swap out based off your level
+ * Store system?
+ */
+public class Clonémon {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         Random randomNumber = new Random();
@@ -15,21 +24,21 @@ public class UnknownGame {
         System.out.print("Please enter a name for your character: ");
         playerName = input.nextLine();
 
-        // player chooses thier starting stats
+        // player chooses their starting stats
         System.out.println(playerName + " please allocate 5 skill points");
 
         do {
             System.out.print("Speed (decides who moves first): ");
             playerSpeed = input.nextInt();
             skillPoints -= playerSpeed;
-            System.out.print("Health (Val multipled by 50): ");
+            System.out.print("Health (Val multiplied  by 50): ");
             playerHealth = input.nextInt();
             skillPoints -= playerHealth;
             System.out.print("Strength  (Amplifies the power of your moves): ");
             playerStrenth = input.nextInt();
             skillPoints -= playerStrenth;
             if (skillPoints < 0) {
-                System.out.println("You used more than 5 points, please redo you skills");
+                System.out.println("You used more than 5 points, please redo your skills");
                 skillPoints = 5;
             }
 
@@ -81,10 +90,10 @@ public class UnknownGame {
         }
         while (playerHealth > 0 && enemyHealth > 0) {
             if (playerTurn) {
-                 // Check if the enemy's health is already at or below zero
+                 // Checks if the enemy's health is already at or below zero
                 if (enemyHealth <= 0) {
                     System.out.println("You won the battle! Congratulations!");
-                    break; // Exit the loop
+                    break; // Exits the loop
                 }
 
                 System.out.println("It's your turn. What move do you choose? Creature's health: " + enemyHealth + "Your Health: " + playerHealth);
@@ -100,17 +109,20 @@ public class UnknownGame {
                         System.out.println("You use Ember on the strange creature! Creature's health: " + enemyHealth);
                         break;
                     case 2:
-                        // Handle Scratch
+                        enemyHealth -= (25 * ((double) playerStrength / 10)) + 25;
+                        System.out.println("You use Ember on the strange creature! Creature's health: " + enemyHealth);
                         break;
                     case 3:
-                        // Handle BubbleBeam
+                        enemyHealth -= (10 * ((double) playerStrength / 10)) + 10;
+                        System.out.println("You use Ember on the strange creature! Creature's health: " + enemyHealth);
                         break;
                     case 4:
-                        // Handle Headbutt
+                        enemyHealth -= (30 * ((double) playerStrength / 10)) + 30;
+                        System.out.println("You use Ember on the strange creature! Creature's health: " + enemyHealth);
                         break;
                     default:
                         System.out.println("Invalid move, please input a move 1-4");
-                        continue; // Repeat the player's turn
+                        continue; // Repeats the player's turn
                 }
 
                 // Enemy's turn
@@ -118,7 +130,7 @@ public class UnknownGame {
 
                  if (enemyHealth <= 0) {
                     System.out.println("You won the battle! Congratulations!");
-                    break; // Exit the loop
+                    break; // Exits the loop
                  }
 
                 switch (enemyMoveSelection) {
@@ -127,21 +139,21 @@ public class UnknownGame {
                         System.out.println("The creature uses Ember on you! your Health: " + playerHealth);
                         break;
                     case 2:
-                        playerHealth -= (25 * ((double) enemyStrength / 10)) + 50;
+                        playerHealth -= (25 * ((double) enemyStrength / 10)) + 25;
                         System.out.println("The creature uses Scratch on you! your Health: " + playerHealth);
                         break;
                     case 3:
-                        playerHealth -= (10 * ((double) enemyStrength / 10)) + 50;
+                        playerHealth -= (10 * ((double) enemyStrength / 10)) + 10;
                         System.out.println("The creature uses Grass Knot on you! your Health: " + playerHealth);
                         break;
                     case 4:
-                        playerHealth -= (30 * ((double) enemyStrength / 10)) + 50;
+                        playerHealth -= (30 * ((double) enemyStrength / 10)) + 30;
                         System.out.println("The creature uses GigaImpact on you! your Health: " + playerHealth);
                         break;
                 }
             }
 
-            playerTurn = !playerTurn; // Switch turns
+            playerTurn = !playerTurn; // Switches turns
 
             if (playerHealth <= 0) {
                 System.out.println("Game Over");
