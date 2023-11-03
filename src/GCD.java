@@ -14,6 +14,5 @@ public class GCD {
             num2 = temp;
         }
         System.out.println("The GCD is: " + num1);
-        ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-    }
+}
 }
