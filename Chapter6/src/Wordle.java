@@ -16,30 +16,40 @@ public class WordleCopy {
         String RED = "\u001B[31m";
         String GREEN = "\u001B[32m";
         String YELLOW = "\u001B[33m";
-        int guesses = 0;
-        boolean correct;
+        String correct = secretWord;
 
         System.out.println("You will have five attempts to guess a random five letter worc.");
         System.out.println("Letters in the correct spot will be " + GREEN + "green" + RESET);
         System.out.println("Letters in the word but not the right spot will be " + YELLOW + "yellow" + RESET);
         System.out.println("Letters that are not in the word will be " + RED + "red\n" + RESET);
 
-        while (guesses <= 5) {
+        for (int round = 0; round < 6; round++) {
+            System.out.print("Enter a guess: ");
             userWord = input.nextLine().toUpperCase();
+            tempWord = userWord;
 
-            for (int i = 0; i > 5; i ++){
-                Char userChar = userInput.charAt(i);
-                Char secretChar = secretWord.charAt(i);
-                if (userChar == secretChar){
-                    System.out.print(GREEN + userChar + RESET);
+            // Create a loop to iterate through each 
+            for (int i = 0; i < 5; i++) {
+                 if (tempWord.equals(correct)){
+                    System.out.println("You Win!");
+                    break;
+                }else if (userWord.substring(i, i + 1).equals(correct.substring(i, i + 1))) {
+                    // Letter matches
+                    System.out.print(GREEN + userWord.substring(i, i + 1) + RESET);
+                    correct = correct.replaceFirst(userWord.substring(i, i + 1), "!");
+                } else if (correct.indexOf(userWord.substring(i, i + 1)) > -1) {
+                    // Letter is in word, but different location
+                    System.out.print(YELLOW + userWord.substring(i, i + 1) + RESET);
+                } else {
+                    // Letter not in word
+                    System.out.print(RED + userWord.substring(i, i + 1) + RESET);
+                } 
+
+               
+                }
+
             }
 
-
-            }
-
-           
-
+        }
     }
-}
-}
 
