@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 import java.lang.String;
+import java.util.ArrayList;
 
 public class WordleCopy {
     public static void main(String[] args) throws Exception {
@@ -9,7 +10,6 @@ public class WordleCopy {
         String userWord;
         String wordList[] = { "BRAIN", "LOSER", "JUNKS", "FUZED", "JOCKS", "COBRA", "QUAKE", "JUICY", "JOKED", "ZESTY",
                 "ADIEU", "STARE", };
-        // String secretWord = wordList[rand.nextInt(wordList.length)];
         String secretWord = "BRAIN";
         String tempWord = secretWord;
         String RESET = "\u001B[0m";
@@ -28,28 +28,27 @@ public class WordleCopy {
             userWord = input.nextLine().toUpperCase();
             tempWord = userWord;
 
-            // Create a loop to iterate through each 
+            // Create a loop to iterate through each
+            ArrayList<String> usedChars = new ArrayList<String>();
             for (int i = 0; i < 5; i++) {
-                 if (tempWord.equals(correct)){
+                if (tempWord.equals(correct)) {
                     System.out.println("You Win!");
                     break;
-                }else if (userWord.substring(i, i + 1).equals(correct.substring(i, i + 1))) {
+                } else if (userWord.substring(i, i + 1).equals(correct.substring(i, i + 1))) {
                     // Letter matches
                     System.out.print(GREEN + userWord.substring(i, i + 1) + RESET);
-                    correct = correct.replaceFirst(userWord.substring(i, i + 1), "!");
-                } else if (correct.indexOf(userWord.substring(i, i + 1)) > -1) {
-                    // Letter is in word, but different location
+                    usedChars.add(userWord.substring(i, i + 1));
+                }else if (usedChars.contains(userWord.substring(i, i + 1))){
+                    System.out.print(RED + userWord.substring(i, i + 1)+ RESET);
+                }else{
                     System.out.print(YELLOW + userWord.substring(i, i + 1) + RESET);
-                } else {
-                    // Letter not in word
-                    System.out.print(RED + userWord.substring(i, i + 1) + RESET);
-                } 
+                }
 
-               
                 }
 
             }
 
-        }
     }
+}
 
+    
