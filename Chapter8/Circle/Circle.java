@@ -8,13 +8,11 @@ public class Circle {
     private double radius;
 
     public static void main(String[] args) {
-        Circles spot = new Circles();
-
-        spot.setRadius(5);
-
-        System.out.println("The radius is " + spot.getRadius());
-        System.out.println("The area is " + spot.area());
-        System.out.println("The circumference is " + number.format(spot.circumference()));
+        Circles c = new Circles(5);
+        
+        System.out.println("The radius is " + c.getRadius());
+        System.out.println("The area is " + number.format(c.area()));
+        System.out.println("The circumference is " + number.format(c.circumference()));
         displayAreaFormula();
     }
      public static void displayAreaFormula(){
