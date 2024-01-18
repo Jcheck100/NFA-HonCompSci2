@@ -1,4 +1,5 @@
 package Chapter8.Circle;
+
 import java.util.*;
 
 class Circles {
@@ -6,16 +7,17 @@ class Circles {
     private static final double PI = 3.14;
     private double radius;
 
-    public Circles() {
-        do{
-        System.out.println("Please input the radius of the circle");
-        radius = userInput.nextInt(); // default radius
-        }while(radius < 1);
+    public Circles() { //runs if there is no value assigned to radius in the constructor in the main method
+        do {
+            System.out.println("Please input the radius of the circle");
+            radius = userInput.nextInt(); // default radius
+        } while (radius < 1);
         userInput.close();
+
     }
 
-    public void setRadius(double newRadius) {
-        radius = newRadius;
+    public Circles(double r) { //overloaded constructor, runs if there is a value assigned to the radius from the start in the constructor in the main method
+        radius = r;
     }
 
     public double area() {
