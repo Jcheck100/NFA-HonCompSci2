@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: "MuseoModerno", sans-serif;
+    background-color: #161b33;
+}
+
+.info-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, 150%);
+    background-color: #4a5aac;
+    width: 300px;
+    height: 200px;
+    border-radius: 70px;
+}
+
+.logo {
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    color: #f1dac4;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    text-shadow: none;
+}
+
+.logo:hover {
+    cursor: default;
+    color: white;
+    justify-content: space-around;
+    transition: all .4s ease-in-out;
+    display: flex;
+    transform: scale(1.1);
+    text-shadow: rgb(255, 255, 255) 2px 2px 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #f1dac4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: white;
+    transition: all .3s ease-in-out;
+    text-shadow: rgb(255, 255, 255) 2px 2px 20px;
+    cursor: pointer;
+    transform: scale(1.5);
+
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+.menu{
+    animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+    list-style: none;
+    
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    color: #f1dac4;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    text-shadow: none;
+}
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+.menu:hover{
+
+ cursor: default;
+ position: absolute;
+    color: white;
+    justify-content: space-around;
+    transition: all .4s ease-in-out;
+    display: flex;
+    transform: scale(1.1);
+    text-shadow: rgb(255, 255, 255) 2px 2px 20px;
+}
+
+@keyframes spin {
+    from {
+    bottom: 0;
+        
+
+    }
+    to {
+bottom: 100;
+     
+    
+    }
+}

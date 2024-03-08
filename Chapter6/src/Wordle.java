@@ -5,7 +5,6 @@ public class Wordle {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Random rand = new Random();
-
         // Chooses secret word
         String wordList[] = { "BRAIN", "LOSER", "JUNKS", "FUZED", "JOCKS", "COBRA", "QUAKE", "JUICY", "JOKED", "ZESTY",
                 "ADIEU", "STARE", };
