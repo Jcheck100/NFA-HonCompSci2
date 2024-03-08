@@ -14,6 +14,9 @@ public class AccountSetUp {
         while (true) {
             System.out.print(
                     "Please input a password that is at least 8 characters, Has an uppercase letter, a lowercase letter, and a symbol: ");
+        while (true) {
+            System.out.print(
+                    "Please input a password that is at least 8 characters, Has an uppercase letter, a lowercase letter, and a symbol: ");
             password = input.nextLine();
             passwordLength = password.length();
 
