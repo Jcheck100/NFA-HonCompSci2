@@ -4,24 +4,27 @@ import java.util.*;
 public class PercentPassing {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
-        int gradeInput;
-        int counter1 = 0;
-        int counter2 = 0;
+        final int FLAG = -1;
+        int gradeInput = 0;
+        int above70 = 0;
+        int totalScores = 0;
+        double percent;
         NumberFormat percentFormat = NumberFormat.getPercentInstance();
 
-        do {
+        while (gradeInput != FLAG) {
             System.out.print("please input a grade (-1 to end): ");
             gradeInput = input.nextInt();
             if (gradeInput >= 70) {
-                counter1++;
+                above70++;
+                totalScores++;
             } else {
-                counter2++;
+                totalScores++;
             }
-        } while (gradeInput != -1);
+        }
+        input.close();
+        percent = (double)above70/((double)totalScores - 1);
 
-        double counterTotal = counter1 + counter2;
-        double percent70 = counter1 / counterTotal;
-
-        System.out.println("The percent of students with a grade above 70 is: " + percentFormat.format(percent70));
+        System.out.println("The percent of students with a grade above 70 is: " + percentFormat.format(percent));
     }
+
 }

@@ -1,68 +1,47 @@
-import java.util.*;
-
+import java.util.Scanner;
 public class MathTutor {
-    public static void main(String[] args) {
-        int randomNumber1;
-        int randomNumber2;
-        int operand;
-        int userInput;
-        Random tempRandomNumber1 = new Random();
-        Random tempRandomNumber2 = new Random();
-        Random tempoperand = new Random();
-        final int max = 10;
-        final int min = 1;
-        final int operandMax = 4;
-        final int operandMin = 1;
-        final double answer;
-        final int mult = 1, add = 2, sub = 3, div = 4;
-        Scanner input = new Scanner(System.in);
 
-        randomNumber1 = tempRandomNumber1.nextInt(max - min + 1) + min;
-        randomNumber2 = tempRandomNumber2.nextInt(max - min + 1) + min;
-        operand = tempoperand.nextInt(max - min + 1) + min;
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double firstNum;
+		double secondNum;
+		double sum = 1;
+		double userSum = 1;
+		double firstRandom;
+		double secondRandom;
+		double operatorRandom;
+	
+		operatorRandom = (4-1) * Math.random() + 1;
+		firstRandom = (10-1) * Math.random() + 1;
+		secondRandom = (10-1) * Math.random() + 1;
+	
+		firstNum = (int)firstRandom;
+		secondNum = (int)secondRandom;
+		operatorRandom=4;
+		if (operatorRandom == 1) { 
+			sum = firstNum * secondNum;
+			System.out.println("? = " + firstNum + "*"  + secondNum);
+		} else if (operatorRandom == 2) { 
+			sum = firstNum + secondNum;
+			System.out.println("? = " + firstNum + "+"  + secondNum);
+		} else if (operatorRandom == 3) { 
+			sum = firstNum - secondNum;
+			System.out.println("? = " + firstNum + "-"  + secondNum);
+		} else if (operatorRandom == 4) { 
+			sum = firstNum / secondNum;
+			System.out.println("? = " + firstNum + "/"  + secondNum);
+		}
+		System.out.println("Enter the answer (): ");
+		userSum = input.nextDouble();
+		sum = Math.round(sum* 100.0) / 100.0;
+		
+		if (userSum == sum) {
+			System.out.print("Correct");
+		} else {
+			System.out.print("Incorrect");
+		}
+		input.close();
+	}
 
-        if (operand == mult) {
-            answer = (randomNumber1 * randomNumber2);
-            System.out.println("What is: " + randomNumber1 + " * " + randomNumber2);
-            userInput = input.nextInt();
-            if (userInput == answer) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("Incorrect");
-            }
-        } else {
-            if (operand == div) {
-                answer = (randomNumber1 / randomNumber2);
-                System.out.println("What is: " + randomNumber1 + "/" + randomNumber2);
-                userInput = input.nextInt();
-                if (userInput == answer) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("Incorrect");
-                }
-            } else {
-                if (operand == add) {
-                    answer = (randomNumber1 + randomNumber2);
-                    System.out.println("What is: " + randomNumber1 + " + " + randomNumber2);
-                    userInput = input.nextInt();
-                    if (userInput == answer) {
-                        System.out.println("Correct!");
-                    } else {
-                        System.out.println("Incorrect");
-                    }
-                } else {
-                    if (operand == sub) {
-                        answer = (randomNumber1 - randomNumber2);
-                        System.out.println("What is: " + randomNumber1 + " - " + randomNumber2);
-                        userInput = input.nextInt();
-                        if (userInput == answer) {
-                            System.out.println("Correct!");
-                        } else {
-                            System.out.println("Incorrect");
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

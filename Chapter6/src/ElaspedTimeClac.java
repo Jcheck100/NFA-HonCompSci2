@@ -24,7 +24,7 @@ public class ElaspedTimeClac {
         } else if (endHour == 11 && startAmPm.toLowerCase().equals("pm")) {
             endAmPm = "am";
         }
-
+        input.close();
         System.out.println("The time after " + elapsedHours + " hours is " + endHour + " " + endAmPm);
     }
 }

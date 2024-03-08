@@ -16,7 +16,7 @@ public class Monogram {
 
         String monogram = firstName.substring(0, 1).toLowerCase() + lastName.substring(0, 1).toUpperCase()
                 + middleName.substring(0, 1).toLowerCase();
-
+                input.close();
         System.out.println("Your monogram is: " + monogram);
     }
 }

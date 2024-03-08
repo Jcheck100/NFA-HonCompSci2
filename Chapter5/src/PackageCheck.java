@@ -22,17 +22,15 @@ public class PackageCheck {
 
         if (volume >= 100000 && weight >= 27) {
             System.out.println("Your package is too wide and too heavy");
+        } else if (volume >= 100000) {
+            System.out.println("Your package is too wide");
+        } else if (weight >= 27) {
+            System.out.println("Your package is too heavy");
         } else {
-            if (volume >= 100000) {
-                System.out.println("Your package is too wide");
-            } else {
-                if (weight >= 27) {
-                    System.out.println("Your package is too heavy");
-                } else {
-                    System.out.println("Package can be shipped!");
-                }
-            }
-
+            System.out.println("Package can be shipped!");
         }
+            
+
+        
     }
 }

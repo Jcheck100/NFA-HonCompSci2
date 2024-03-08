@@ -3,8 +3,15 @@ import java.util.*;
 public class RockPaperScissorsP2 {
     public static void main(String[] args) {
 
+        /* Rock beats lizard and Scissors
+         * Lizard beats paper and spock
+         * spock beats scissors and paper
+         * scissors beats paper and lizard
+         * paper beats rock and spock
+         */
+
         Random computerNumber = new Random();
-        final int Rock = 1, Paper = 2, Scissors = 3;
+        final int Rock = 1, Paper = 2, Scissors = 3, Spock = 4, Lizard = 5;
         int userNumber;
         int computerNumber2;
         Scanner input = new Scanner(System.in);

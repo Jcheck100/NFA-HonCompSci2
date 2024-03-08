@@ -38,14 +38,12 @@ public class RockPaperScissorsP1 {
         }
         if (userNumber == Paper && computerNumber2 == Rock) {
             System.out.println("You Win");
-        } else {
-            if (userNumber == Scissors && computerNumber2 == Paper) {
-                System.out.println("You Win");
-            } else {
-                if (userNumber == Rock && computerNumber2 == Scissors) {
-                    System.out.println("You Win");
-                }
-            }
+        } else if (userNumber == Scissors && computerNumber2 == Paper) {
+            System.out.println("You Win");
+        } else if (userNumber == Rock && computerNumber2 == Scissors) {
+            System.out.println("You Win");
+        }
+            
 
             if (userNumber == Rock && computerNumber2 == Paper) {
                 System.out.println("CPU Win");

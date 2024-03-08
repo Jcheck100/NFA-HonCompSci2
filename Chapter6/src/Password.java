@@ -19,6 +19,6 @@ public class Password {
                 System.out.println("The password you entered is incorrect");
                 counter += 1;
             }while (counter < 3);
-
+            input.close();
         }
     }

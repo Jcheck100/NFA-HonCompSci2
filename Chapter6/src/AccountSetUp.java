@@ -8,13 +8,41 @@ public class AccountSetUp {
         String username = input.nextLine();
         int passwordLength;
         String password;
+        String[] symbol = { "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "{", "}",
+                "[", "]", "|", ";", ":", "'", "<", ">", ",", ".", "/", "?" };
 
-        do {
-            System.out.print("Please input a password that is at least 8 characters: ");
+        while (true) {
+            System.out.print(
+                    "Please input a password that is at least 8 characters, Has an uppercase letter, a lowercase letter, and a symbol: ");
             password = input.nextLine();
             passwordLength = password.length();
-        } while (passwordLength < 8);
-        
-        System.out.print("Your username is " + username.toLowerCase() + " and your password is " + password.toLowerCase());
+
+            boolean hasUpper = false, hasLower = false, hasSymbol = false, hasNumber = false;
+
+            for (int i = 0; i < password.length(); i++) {
+                if (password.charAt(i) >= 65 && password.charAt(i) <= 90) {
+                    hasUpper = true;
+                }
+                if (password.charAt(i) >= 97 && password.charAt(i) <= 122) {
+                    hasLower = true;
+                }
+                if (password.charAt(i) >= 0 && password.charAt(i) <= 9) {
+                    hasNumber = true;
+                }
+            }
+
+            for (String c : symbol) {
+                if (password.contains(c)) {
+                    hasSymbol = true;
+                }
+            }
+
+            if (hasUpper && hasLower && hasSymbol && passwordLength >= 8) {
+                break;
+            }
+        }
+        input.close();
+        System.out.print(
+                "Your username is " + username + " and your password is " + password);
     }
 }

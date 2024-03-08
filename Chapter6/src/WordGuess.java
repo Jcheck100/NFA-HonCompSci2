@@ -20,9 +20,12 @@ public class WordGuess {
         System.out.println(wordSoFar + "\n"); // display dashes
         /* allow player to make guesses */
         do {
+            do{
             System.out.print("Enter a letter (" + FLAG + " to guess entire word): ");
             letterGuess = input.nextLine();
             letterGuess = letterGuess.toUpperCase();
+            }while(letterGuess.length() != 1);
+            
 
             /* increment number of guesses */
             numGuesses += 1;
