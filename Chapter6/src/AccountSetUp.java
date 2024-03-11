@@ -49,3 +49,4 @@ public class AccountSetUp {
                 "Your username is " + username + " and your password is " + password);
     }
 }
+}
