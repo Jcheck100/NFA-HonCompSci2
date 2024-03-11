@@ -1,8 +1,8 @@
 
 public class NecklacePT2 {
     public static void main(String[] args) {
-        for (int i = 0; i <= 9; i++) {
-            for (int j = 0; j <= 9; j++) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
                 count(i, j);
             }
         }
@@ -13,6 +13,7 @@ public class NecklacePT2 {
 
         int firstNum = i, lastNum = j, currentNum, firstNum2 = i, lastNum2 = j;
         int counter = 0;
+        System.out.print(firstNum + " " + lastNum2 + " ");
         do {
             counter += 1;
             currentNum = (firstNum + lastNum) % 10;
@@ -22,7 +23,8 @@ public class NecklacePT2 {
 
         } while (firstNum != firstNum2 || lastNum != lastNum2);
 
-        System.out.println("\nit took " + counter + " interations to close the necklace");
+        System.out.println(" it took " + counter + " interations to close the necklace");
+        System.out.println();
 
     }
 }

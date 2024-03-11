@@ -1,5 +1,3 @@
-package Chapter8.Circle;
-
 import java.util.*;
 
 class Circles {
