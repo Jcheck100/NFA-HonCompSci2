@@ -12,7 +12,7 @@ public class HiLow {
             System.out.println("\nYou have " + points + " points");
 
             randomNumber = generateRandomNumber();
-
+  
             System.out.println("How many points would you like to wager?");
             wager = sc.nextInt();
 
@@ -24,7 +24,7 @@ public class HiLow {
             points = isCorrect(guess, randomNumber, points, wager);
 
             System.out.println(
-                    "\nWould you like to play again? " + "you have: " + points + "points" + " (y for yes, n for no)");
+                    "\nWould you like to play again? " + "you have: " + points + " points " + "(y for yes, n for no)");
             userChoice = sc.next().toLowerCase();
 
         } while (!userChoice.equals("n") && points > 0);
