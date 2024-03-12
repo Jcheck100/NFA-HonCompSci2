@@ -3,30 +3,32 @@ import java.util.*;
 public class HiLow {
     public static void main(String[] args) {
         int points = 1000, wager, guess, randomNumber;
-        char playAgain;
+        String userChoice;
         Scanner sc = new Scanner(System.in);
         System.out.println("High Low Guessing Game");
         System.out.println(
                 "\nRules\nNumbers 1 through 6 are Low\nNumbers 8 through 13 are High\n7 is niether high or low");
-                do{
-        System.out.println("\nYou have " + points + " points");
-
-        randomNumber = generateRandomNumber();
-
-        System.out.println("How many points would you like to wager?");
-        wager = sc.nextInt();
-
         do {
-            System.out.println("Predict (High 1, Low 0): ");
-            guess = sc.nextInt();
-        } while (guess != 1 && guess != 0);
+            System.out.println("\nYou have " + points + " points");
 
-        isCorrect(guess, randomNumber);
+            randomNumber = generateRandomNumber();
 
-        System.out.println("\nWould you like to play again? (y for yes, n for no)");
-        
+            System.out.println("How many points would you like to wager?");
+            wager = sc.nextInt();
 
-    }while(points > 0 && playAgain)
+            do {
+                System.out.println("Predict (High 1, Low 0): ");
+                guess = sc.nextInt();
+            } while (guess != 1 && guess != 0);
+
+            points = isCorrect(guess, randomNumber, points, wager);
+
+            System.out.println(
+                    "\nWould you like to play again? " + "you have: " + points + "points" + " (y for yes, n for no)");
+            userChoice = sc.next().toLowerCase();
+
+        } while (!userChoice.equals("n") && points > 0);
+        sc.close();
     }
 
     public static int generateRandomNumber() {
@@ -37,26 +39,32 @@ public class HiLow {
         return (randomNumber);
     }
 
-    public static void isCorrect(int guess, int randomNumber) {
+    public static int isCorrect(int guess, int randomNumber, int points, int wager) {
         switch (guess) {
             case 0:
-                if ((guess <= 6 && guess > 0) && (randomNumber <= 6 && randomNumber > 0)) {
+                if (randomNumber <= 6 && randomNumber > 0) {
+                    points += wager * 2;
                     System.out.println("You win!\nThe random number was: " + randomNumber);
-                } else if ((guess > 7 && guess < 14) && (randomNumber > 7 && randomNumber < 14)) {
+                    break;
+                } else if (randomNumber >= 7 && randomNumber < 14) {
+                    points -= wager;
                     System.out.println("You lose!\nThe random number was: " + randomNumber);
-                } else {
-                    System.out.println("You lose!\nThe random number was: " + randomNumber);
+                    break;
                 }
 
             case 1:
-                if ((guess <= 6 && guess > 0) && (randomNumber <= 6 && randomNumber > 0)) {
-                    System.out.println("You Lose!\nThe random number was: " + randomNumber);
-
-                } else if ((guess > 7 && guess < 14) && (randomNumber > 7 && randomNumber < 14)) {
+                if (randomNumber > 7 && randomNumber < 14) {
+                    points += wager * 2;
                     System.out.println("You Win!\nThe random number was: " + randomNumber);
-                } else {
-                    System.out.println("You lose!\nThe random number was: " + randomNumber);
+                    break;
+                } else if (randomNumber <= 7 && randomNumber > 0) {
+                    points -= wager;
+                    System.out.println("You Lose!\nThe random number was: " + randomNumber);
+                    break;
                 }
         }
+
+        return points;
+
     }
 }
