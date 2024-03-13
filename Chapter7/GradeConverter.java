@@ -29,13 +29,13 @@ public class GradeConverter {
      * post: The letter grade A, B, C, D, or F has been returned.
      */
     public static String getLetterGrade(int numGrade) {
-        if (numGrade == 100){
+        if (numGrade == 100) {
             return "A+";
-        }else if (numGrade == 89){
+        } else if (numGrade == 89) {
             return "B+";
-        }else if (numGrade == 79){
+        } else if (numGrade == 79) {
             return "C+";
-        }else if (numGrade == 69){
+        } else if (numGrade == 69) {
             return "D+";
         } else if (numGrade < 60) {
             return "F";
@@ -45,13 +45,12 @@ public class GradeConverter {
             return "C";
         } else if (numGrade < 90) {
             return "B";
-        } else if (numGrade < 99){
-            return"A";
+        } else if (numGrade <= 99) {
+            return "A";
         } else {
             return "";
         }
     }
-       
 
     public static void main(String[] args) {
         final int FLAG = -1;
