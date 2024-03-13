@@ -28,7 +28,7 @@ public class DigitsPart2 {
 
 		
 		
-
+	input.close();
 		}
 
 	}

@@ -22,5 +22,6 @@ public class CodingChallenge2 {
             System.out.println("The cumulative difference in sea levels is " + finalNumber);
 
         } while (true);
+        userInput.close();
     }
 }

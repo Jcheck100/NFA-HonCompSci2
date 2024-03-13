@@ -4,7 +4,6 @@ public class CircleCircumference {
 	public static void main(String[] args) {
 		double radius;
 		double circumference;
-		final double PI = 3.14;
 		String prompt =("Please input the radius of the circle: ");
 		Scanner input = new Scanner(System.in);
 		
@@ -23,7 +22,7 @@ public class CircleCircumference {
 		else
 
 			System.out.print("Negative radii are not allowed");
-
+			input.close();
 	}
 
 }

@@ -50,7 +50,7 @@ public class Election {
 		System.out.print ("Total Votes: " + totalVotes + "\n");
 		
 		
-		
+		input.close();
 	
 	}
 

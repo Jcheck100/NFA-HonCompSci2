@@ -11,7 +11,7 @@ public class RockPaperScissorsP2 {
          */
 
         Random computerNumber = new Random();
-        final int Rock = 1, Paper = 2, Scissors = 3, Spock = 4, Lizard = 5;
+        final int Rock = 1, Paper = 2, Scissors = 3;
         int userNumber;
         int computerNumber2;
         Scanner input = new Scanner(System.in);
@@ -75,5 +75,6 @@ public class RockPaperScissorsP2 {
                
 
     }
+    input.close();
     }
 }

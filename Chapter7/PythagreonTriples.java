@@ -1,4 +1,4 @@
-import java.util.*;
+import java.lang.Math;
 
 public class PythagreonTriples {
     public static void main(String[] args) {

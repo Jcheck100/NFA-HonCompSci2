@@ -14,7 +14,7 @@ public class ObjectHeight {
 		finalHeight = 100-4.9*userInput*2;
 		
 		System.out.print(end + finalHeight + "m");
-		
+		input.close();
 	}
 
 }

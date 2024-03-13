@@ -24,6 +24,7 @@ public class Discriminant {
         }else if ( discriminant > 0){
             System.out.println("Two Real Roots");
         }
+        input.close();
     }
 }
 

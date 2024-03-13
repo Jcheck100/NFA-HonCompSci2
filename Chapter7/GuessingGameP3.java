@@ -25,7 +25,7 @@ public class GuessingGameP3 {
                 isHighOrLow(userNumber, randomNumber);
             }
         } while (userNumber != randomNumber);
-
+        input.close();
     }
 
     public static void isHighOrLow(int userNumber, int randomNumber) {
@@ -34,5 +34,6 @@ public class GuessingGameP3 {
         } else if (userNumber < randomNumber) {
             System.out.println("(Hint: Higher)\n");
         }
+
     }
 }

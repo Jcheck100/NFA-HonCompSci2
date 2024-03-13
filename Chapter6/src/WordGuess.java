@@ -67,5 +67,6 @@ public class WordGuess {
         System.out.println("The secret word is " + word);
         System.out.println("You made " + numGuesses + " guesses.");
          System.out.println("Your score was: " + score);
+         input.close();
     }
 }

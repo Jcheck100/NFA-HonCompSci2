@@ -22,7 +22,7 @@ public class Digits {
 	onesPlace = userNumber%10;
 	System.out.print("Ones: " + onesPlace + "\n");
 	
-
+	input.close();
 	}
 
 }

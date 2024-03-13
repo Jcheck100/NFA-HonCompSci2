@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class OddSum {
+    public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        
         int userNumber;
         int times;
         int oddNumberSum = 0;
@@ -22,5 +23,6 @@ public class OddSum {
         }
         System.out.println(oddNumberSum);
         input.close();
+  
     }
 }

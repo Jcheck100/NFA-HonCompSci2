@@ -51,6 +51,6 @@ public class ETC {
         } else if (afternoon == true) {
             System.out.println("The current time is: " + total + ":00 pm");
         }
-
+        input.close();
     }
 }

@@ -15,7 +15,7 @@ public class Energy {
 		
 		System.out.println("The energy in joules is: " + energy);
 		System.out.println("The amount of 100 Watt light bulbs that can be powered is: " + bulb);
-		
+		input.close();
 	}
 
 }

@@ -26,5 +26,7 @@ public class CodingChallenge3 {
             total += Integer.parseInt(nums);
         }
         System.out.println("The total is: " + total);
+        sc.close();
     }
+
 }

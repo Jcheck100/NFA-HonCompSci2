@@ -17,6 +17,6 @@ public class GradesPart2 {
 	avgGrade = (avgGrade/5);
 
 	System.out.print("The avg is: " + percent.format(avgGrade));
-	
+	input.close();
 	}
 }

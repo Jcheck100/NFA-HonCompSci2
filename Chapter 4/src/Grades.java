@@ -33,7 +33,7 @@ public class Grades {
 	
 	System.out.print("The average is: " + avgGrade);
 	
-	
+	input.close();
 	
 	
 

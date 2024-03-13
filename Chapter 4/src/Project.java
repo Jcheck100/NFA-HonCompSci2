@@ -38,6 +38,7 @@ public class Project {
 		System.out.format ("%-10s %12s", "Coding",  percent.format(codePercent)+"\n");
 		System.out.format ("%-10s %12s", "Debugging",  percent.format(debugPercent)+"\n");
 		System.out.format ("%-10s %12s", "Testing", percent.format(testPercent)+"\n");
+		input.close();
 	}
 
 }

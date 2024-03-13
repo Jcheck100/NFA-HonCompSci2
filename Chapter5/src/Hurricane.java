@@ -26,5 +26,6 @@ public class Hurricane {
                 System.out.print("Greater than 155 mph or 135 kt or 249 km/hr");
                 break;
         }
+        input.close();
     }
 }

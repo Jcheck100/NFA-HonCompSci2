@@ -23,6 +23,6 @@ public class GuessingGameP2 {
                 System.out.println("You Win");
             }
         } while (userNumber != randomNumber);
-
+        input.close();
     }
 }

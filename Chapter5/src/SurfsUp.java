@@ -18,6 +18,6 @@ public class SurfsUp {
         } else {
             System.out.println("what kind of surf is that");
         }
-
+        input.close();
     }
 }

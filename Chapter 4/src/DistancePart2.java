@@ -42,7 +42,8 @@ public class DistancePart2 {
 		//Print Added Inputs and Name	
 		System.out.println(name + " Traveled: " + bigNumber.format(totalDistance)+ "(km)");
 	
-
+		input.close();
+		RacerName.close();
 		
 	}
 

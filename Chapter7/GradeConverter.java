@@ -72,5 +72,6 @@ public class GradeConverter {
             System.out.print("Enter a numeric grade (-1 to quit): ");
             numericGrade = input.nextInt();
         }
+        input.close();
     }
 }

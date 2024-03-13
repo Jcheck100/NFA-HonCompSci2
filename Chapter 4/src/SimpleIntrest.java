@@ -20,7 +20,7 @@ public class SimpleIntrest {
 		
 		totalMoney = principal *(1 + numYears * intRate);
 		System.out.print ("The total value after the term is: " + dollars.format(totalMoney));
-
+		input.close();
 	}
 
 }

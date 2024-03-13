@@ -20,7 +20,7 @@ public class PizzaCost {
 		
 		System.out.print("The cost of the pizza is: " + dollars.format(cost));
 	
-
+		input.close();
 	}
 
 }

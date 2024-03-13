@@ -22,5 +22,6 @@ public class CarPayment {
         double total = numerator/denominator;
 
         System.out.println("The monthly payment is: " + money.format(total));
+        input.close();
     }
 }

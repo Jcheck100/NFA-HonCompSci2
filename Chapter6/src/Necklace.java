@@ -22,7 +22,7 @@ public class Necklace {
             System.out.print(currentNum + " ");
 
         } while (firstNum != firstNum2 || lastNum != lastNum2);
-
+        input.close();
         System.out.println("it took " + counter + " interations to close the necklace");
     }
 }

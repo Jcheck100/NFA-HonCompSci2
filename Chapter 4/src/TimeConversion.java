@@ -16,7 +16,7 @@ public class TimeConversion {
 		timeOnes = ((timeMinutes%60)%10);
 		
 		System.out.println("The time is: " + timeHours + ":" + timeTens + timeOnes);
-
+		input.close();
 	}
 
 }

@@ -19,6 +19,6 @@ public class Delivery {
         } else {
             System.out.println("Your packege was accepted");
         }
-
+        input.close();
     }
 }

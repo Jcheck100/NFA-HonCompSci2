@@ -20,6 +20,6 @@ public class PerfectSquare {
         } else {
             System.out.println((int)userInput + " is not a perfect square.");
         }
-
+        input.close();
     }
 }

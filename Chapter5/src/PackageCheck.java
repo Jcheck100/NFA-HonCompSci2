@@ -30,7 +30,7 @@ public class PackageCheck {
             System.out.println("Package can be shipped!");
         }
             
-
+        input.close();
         
     }
 }

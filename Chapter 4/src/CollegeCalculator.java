@@ -38,7 +38,7 @@ public class CollegeCalculator {
 		System.out.print("The cost of your education is: " + bigNumber.format(finalCost) + "$");
 		
 		
- 
+		input.close();
 
 	}
 

@@ -19,7 +19,7 @@ public class TempatureConvereter {
 		Double celciusConversion3 = (double)(celciusConversion2)/100;
 		
 		System.out.print(celciusConversion3);
-		
+		input.close();
 	}
 	
 }

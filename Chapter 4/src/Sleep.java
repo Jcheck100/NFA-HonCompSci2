@@ -44,7 +44,7 @@ public class Sleep {
 		System.out.println("You've been alive for: "+ bigNumber.format(timeAlive) + " Days");
 		System.out.println("You've been asleep for: "+ bigNumber.format(timeAsleep) + " hours");
 				
-		
+		input.close();
 		
 		
 		

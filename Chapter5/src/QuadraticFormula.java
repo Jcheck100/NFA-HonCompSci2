@@ -43,5 +43,6 @@ public class QuadraticFormula {
                 }
             }
         }
+        input.close();
     }
 }

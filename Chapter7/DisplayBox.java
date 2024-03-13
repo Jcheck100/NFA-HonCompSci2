@@ -6,7 +6,6 @@ public class DisplayBox {
     public static void main(String[] args) {
 
         int length, width;
-        String symbolChange = "", userSymbol = "*";
 
         do {
             System.out.print("Please input the length of the box (Must be greater than 1): ");
@@ -19,12 +18,13 @@ public class DisplayBox {
         } while (width < 1);
 
         drawBox(length, width);
+        input.close();
     }
 
     public static void drawBar(int length, int width) {
         String symbol = "*";
 
-        for (int i = 1; i <= width - 1 ; i++) {
+        for (int i = 1; i <= width - 1; i++) {
             System.out.print(symbol);
             for (int j = 1; j <= length; j++) {
                 System.out.print(symbol);
@@ -59,6 +59,7 @@ public class DisplayBox {
         } else {
             drawBar(length, width);
         }
+
     }
 
 }

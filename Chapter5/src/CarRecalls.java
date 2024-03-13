@@ -4,7 +4,7 @@ public class CarRecalls {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int modelNumber;
-        boolean defective = false;
+        // boolean defective = false;
 
         System.out.print("Please input your cars model number: ");
         modelNumber = input.nextInt();
@@ -26,6 +26,7 @@ public class CarRecalls {
             break;
             default:
             System.out.println("\nYour car is not defective!");
+            input.close();
         }
     }
 }
