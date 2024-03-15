@@ -8,13 +8,13 @@ public class Exponentiation {
         int baseNumber = input.nextInt();
         System.out.println("Enter exponent: ");
         int exponent = input.nextInt();
-        int finalNumber = baseNumber;
 
-        System.out.println(powerOf(baseNumber, exponent, finalNumber));
+        System.out.println(powerOf(baseNumber, exponent));
 
     }
 
-    public static int powerOf(int baseNumber, int exponent, int finalNumber) {
+    public static int powerOf(int baseNumber, int exponent) {
+        int finalNumber = baseNumber;
         for (int i = 0; i < exponent - 1; i++) {
             finalNumber *= baseNumber;
         }
