@@ -45,7 +45,8 @@ public class MetricConversions {
                 break;
         }
     }
-
+/*All of the following methods start by getting a conversion factor of one unit to the next, then they do whatever calculation is necasasary
+to convert said unit to the next unit*/
     public static void inToCm(double startingUnit, double endingUnit, double conversion) {
         conversion = 2.54;
         System.out.println("Please input the number of inches you would like to convert to centimeters");

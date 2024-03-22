@@ -32,18 +32,18 @@ public class PrimeNumber {
         }
 
     }
-
+    
+/*Checks for prime numbers by checking if the number is evenly divisible by 2
+if it is the method returns true, otherwise the method returns false
+*/
     public static boolean isPrime(int currentNum) {
-
         boolean prime = true;
-
         for (int i = 2; i <= currentNum / 2; i++) {
             if (currentNum % i == 0) {
                 prime = false;
                 break;
             }
         }
-
         if (prime) {
             return (true);
         } else {
