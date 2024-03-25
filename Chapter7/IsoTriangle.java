@@ -3,11 +3,11 @@ import java.util.*;
 public class IsoTriangle {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-           int lines = 0;
-        do{
-        System.out.println("Enter the number of lines:");
-        lines = userInput.nextInt();
-        }while(lines <= 0);
+        int lines = 0;
+        do {
+            System.out.println("Enter the number of lines:");
+            lines = userInput.nextInt();
+        } while (lines <= 0);
         drawBar(lines);
         userInput.close();
     }

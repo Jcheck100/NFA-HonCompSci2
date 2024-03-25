@@ -29,27 +29,28 @@ public class BetterDisplayBox {
         sc.close();
 
     }
-
+//Prints a * and a space for whatever the width of the box is
     public static void drawBar(int w) {
         for (int i = 0; i < w; i++) {
             System.out.print("* ");
         }
         System.out.println();
     }
-
+//calls drawBar(w) to print the correct amount of bars according to the length
     public static void drawBox(int w, int l) {
         for (int i = 0; i < l; i++) {
             drawBar(w);
         }
     }
 
+//Prints whatever symbol the user chose and a space for whatever the width of the box is
     public static void drawBar(int w, String s) {
         for (int i = 0; i < w; i++) {
             System.out.print(s+ " ");
         }
         System.out.println();
     }
-
+//calls drawBar(w,s) to print the correct amount of bars according to the length
     public static void drawBox(int w, int l, String s) {
         for (int i = 0; i < l; i++) {
             drawBar(w, s);
